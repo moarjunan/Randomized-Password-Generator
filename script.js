@@ -18,22 +18,22 @@ function generatePassword() {
 
   var lowercase = window.confirm("Should the password contain lowercase letters?");
     if (lowercase) {
-    var empty = empty += characters.Lowercase.toString()
+    var empty = empty += characters.Lowercase;
     }
 
   var uppercase = window.confirm("Should the password contain uppercase letters?");
     if (uppercase) {
-    var empty = empty += characters.Uppercase.toString();
+    var empty = empty += characters.Uppercase;
     };
 
   var number = window.confirm("Should the password contain numeric characters?");
     if (number) {
-    var empty = empty += characters.Number.toString();
+    var empty = empty += characters.Number;
     };
 
   var special = window.confirm("Should the password contain special characters?");
     if (special) {
-    var empty = empty += characters.Special.toString();
+    var empty = empty += characters.Special;
     };
 
 
