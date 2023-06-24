@@ -8,29 +8,38 @@ var characters = {
   Special: ["!","","#","$","%","&","'","(", "/",")","*","+",",","-",".","/",":",";","<","=",">","?","@","[","]","^","_","`","{","|","}","~"]
 };
 
+
+
 function generatePassword() {
 
-window.prompt("Enter password length of atleast 8 characters and no more than 128 characters.");
+var num = window.prompt("Enter password length of atleast 8 characters and no more than 128 characters.");
 
-var lowercase = window.prompt("Should the password contain lowercase letters?");
+var lowercase = window.confirm("Should the password contain lowercase letters?");
 if (lowercase) {
-  items[Math.floor(Math.random()*characters.Lowercase.length)];
+  var randlc = characters.Lowercase[Math.floor(Math.random()*characters.Lowercase.length)];
+  console.log(randlc)
 }
 
 var uppercase = window.confirm("Should the password contain uppercase letters?");
 if (uppercase) {
-  items[Math.floor(Math.random()*characters.Uppercase.length)];
+  var randuc = characters.Uppercase[Math.floor(Math.random()*characters.Uppercase.length)];
 };
 
 var number = window.confirm("Should the password contain numeric characters?");
 if (number) {
-  items[Math.floor(Math.confirm()*characters.Number.length)];
+  var randnum = characters.Number[Math.floor(Math.random()*characters.Number.length)];
 };
 
 var special = window.confirm("Should the password contain special characters?");
 if (special) {
-  items[Math.floor(Math.random()*characters.Special.length)];
+  var randspec = characters.Special[Math.floor(Math.random()*characters.Special.length)];
 };
+
+var password = "";
+    for (let i = 0; i < num; i++) {
+      password += passwordCharSet[Math.floor(Math.random() * passwordCharSet.length)]
+    }
+    return password;
 
 }
 
