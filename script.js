@@ -8,6 +8,16 @@ var characters = {
   Special: ["!","","#","$","%","&","'","(", "/",")","*","+",",","-",".","/",":",";","<","=",">","?","@","[","]","^","_","`","{","|","}","~"]
 };
 
+function generatePassword() {
+
+window.prompt("Enter password length of atleast 8 characters and no more than 128 characters.")
+window.prompt("Should the password contain lowercase letters?")
+window.prompt("Should the password contain uppercase letters?")
+window.prompt("Should the password contain numeric characters?")
+window.prompt("Should the password contain special characters?")
+
+
+}
 
 
 // Write password to the #password input
