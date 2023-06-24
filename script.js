@@ -12,34 +12,34 @@ var characters = {
 
 function generatePassword() {
 
-var num = window.prompt("Enter password length of atleast 8 characters and no more than 128 characters.");
+  var empty = ""
 
-var lowercase = window.confirm("Should the password contain lowercase letters?");
-if (lowercase) {
-  var randlc = characters.Lowercase[Math.floor(Math.random()*characters.Lowercase.length)];
-  console.log(randlc)
-}
+  var num = window.prompt("Enter password length of atleast 8 characters and no more than 128 characters.");
 
-var uppercase = window.confirm("Should the password contain uppercase letters?");
-if (uppercase) {
-  var randuc = characters.Uppercase[Math.floor(Math.random()*characters.Uppercase.length)];
-};
-
-var number = window.confirm("Should the password contain numeric characters?");
-if (number) {
-  var randnum = characters.Number[Math.floor(Math.random()*characters.Number.length)];
-};
-
-var special = window.confirm("Should the password contain special characters?");
-if (special) {
-  var randspec = characters.Special[Math.floor(Math.random()*characters.Special.length)];
-};
-
-var password = "";
-    for (let i = 0; i < num; i++) {
-      password += passwordCharSet[Math.floor(Math.random() * passwordCharSet.length)]
+  var lowercase = window.confirm("Should the password contain lowercase letters?");
+    if (lowercase) {
+    var empty = empty += characters.Lowercase
     }
-    return password;
+
+  var uppercase = window.confirm("Should the password contain uppercase letters?");
+    if (uppercase) {
+    var empty = empty += characters.Uppercase;
+    };
+
+  var number = window.confirm("Should the password contain numeric characters?");
+    if (number) {
+    var empty = empty += characters.Number;
+    };
+
+  var special = window.confirm("Should the password contain special characters?");
+    if (special) {
+    var empty = empty += characters.Special;
+    };
+
+  for (let i = 0; i < num; i++) {
+     empty[Math.floor(Math.random() * empty.length)]
+     }
+  return empty;
 
 }
 
