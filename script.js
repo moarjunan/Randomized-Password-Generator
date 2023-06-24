@@ -11,7 +11,7 @@ var characters = {
 
 
 function generatePassword() {
-
+  
   var empty = ""
 
   var num = window.prompt("Enter password length of atleast 8 characters and no more than 128 characters.");
@@ -36,11 +36,12 @@ function generatePassword() {
     var empty = empty += characters.Special;
     };
 
+  var filled = "";
   for (let i = 0; i < num; i++) {
-     empty[Math.floor(Math.random() * empty.length)]
+    filled += empty[Math.floor(Math.random() * empty.length)]
      }
-  return empty;
-
+  return filled;
+  
 }
 
 
